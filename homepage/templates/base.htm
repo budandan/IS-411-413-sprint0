@@ -1,0 +1,40 @@
+## this is the skeleton of all pages on in this app - it defines the basic html tags
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <head>
+
+        <title>FOMO IS THE BEST</title>
+
+        ## add any site-wide scripts or CSS here; for example, jquery:
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <link rel="stylesheet" href="${ STATIC_URL }homepage/media/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="${ STATIC_URL }homepage/media/bootstrap/css/bootstrap-theme.min.css">
+        <script src="${ STATIC_URL }homepage/media/bootstrap/js/bootstrap.min.js"></script>
+
+        ## render the static file links with the same name as this template
+        <script src="/django_mako_plus/dmp-common.min.js"></script>
+        ${ django_mako_plus.links(self) }
+
+        <link rel="icon" type="image/gif" href="https://media.giphy.com/media/FMnVZzDALopvG/giphy.gif">
+
+    </head>
+    <body>
+        <%block name="construction"></%block>
+
+        <header>
+            <%block name="navbar"></%block>
+        </header>
+
+        <main>
+            <div class="container-fluid">
+                <%block name="content"></%block>
+            </div>
+        </main>
+    </body>
+    <footer>
+            <% from datetime import datetime%> 
+            <p>&copy; Daniel Ferolino ${datetime.now().year}</p>
+    </footer>
+</html>
