@@ -37,11 +37,11 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Home</a></li>
-                    <li><a href="/about/">About</a></li>
-                    <li><a href="/contact/">Contact</a></li> 
-                    <li><a href="/sections/">Sections</a></li>
-                    <li><a href="/faq/">FAQ</a></li>
+                    <li class="${ 'active' if request.dmp_router_page == 'index' else ''}"><a href="/">Home</a></li>
+                    <li class="${ 'active' if request.dmp_router_page == 'about' else ''}"><a href="/about/">About</a></li>
+                    <li class="${ 'active' if request.dmp_router_page == 'contact' else ''}"><a href="/contact/">Contact</a></li> 
+                    <li class="${ 'active' if request.dmp_router_page == 'sections' else ''}"><a href="/sections/">Sections</a></li>
+                    <li class="${ 'active' if request.dmp_router_page == 'faq' else ''}"><a href="/faq/">FAQ</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
